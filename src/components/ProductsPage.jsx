@@ -8,7 +8,7 @@ export default function ProductsPage() {
     const [products, setProducts] = useState(data)
     const handleSearch = (SearchValue) => {
         if(SearchValue === ''){
-          setProducts(products)
+          setProducts(data)
         }else {
           const filtered = products.filter(product => product.name.toLowerCase().includes((SearchValue).toLowerCase()))
           setProducts(filtered)
