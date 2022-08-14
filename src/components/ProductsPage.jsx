@@ -14,10 +14,15 @@ export default function ProductsPage() {
           setProducts(filtered)
         }
       } 
+
+      const handleAvailableProducts = () => {
+        const filtered = products.filter(product => product.inStock && product)
+          setProducts(filtered)
+      }
       return (
         <div>   
             <h1>IronStore</h1>
-            <SearchBar onSearch={handleSearch}/>
+            <SearchBar onSearch={handleSearch} availableProducts={handleAvailableProducts}/>
             <ProductTable product={products} />
         </div>
         

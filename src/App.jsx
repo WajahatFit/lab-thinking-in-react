@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
-import ProductsPage from './components/ProductsPage';
-
-import data from './data.json';
+import ProductsPage from './components/ProductsPage'
 
 
 
@@ -10,7 +8,7 @@ function App() {
  
   return (
     <div className="App">
-        <ProductsPage product={data}/>
+        <ProductsPage />
         
     </div>
   );
